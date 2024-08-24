@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+    <style>
+        *{
+    margin: 0px;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #cd8c38;
+}
+
+#navigation{
+    background-color: rgb(51,51,51);
+    height: 55px;
+    width: 1550px;
+    word-spacing: 10px;
+    line-height: 70px;
+    position: fixed;
+    left: 0px;
+    top: -8px;
+    word-spacing: 50px;
+    display: inline;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 2;
+}
+
+#title{
+    color:#cd8c38;
+    position: relative;
+    left: 30px;
+}
+
+nav{
+    position: relative;
+    left: 20px;
+}
+
+.navcontent{
+    text-decoration: none;
+    color: white;
+    width: 100px;   
+}
+
+#nav1{
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: 400px;
+    width: 100px;
+    text-align: center;
+}
+
+ #nav2{
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: 420px;
+    display: flex;
+    text-align: center; 
+} 
+#nav3{
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: 970px;
+    display: flex;  
+    text-align: center;
+    justify-content: center;
+    width: 100px;
+}
+
+
+
+#popup{
+    position: relative;
+    top: 40px;
+    left: 800px;
+    color: red;
+    word-spacing: 5px;
+    display: none;  
+}
+#nav3:hover+#popup{
+    display: inline-block;
+}
+
+#nav1:hover{
+    background-color: rgb(68,68,68);    
+}
+#nav2:hover{
+    background-color: rgb(68,68,68);    
+}
+#nav3:hover{
+    background-color: rgb(68,68,68);    
+}
+
+body{
+    background-color:black;
+}
+
+#main-content{
+    color: white;
+    position: relative;
+    top: 100px;  
+    z-index: 1;
+    
+}
+
+#sidebar{
+    background:linear-gradient(45deg,rgba(255,255,255,0.05),rgba(205,140,56,0.15));
+    position: relative;
+    left: 100px;
+    height:480px ;
+    width: 250px;
+    line-height: 30px;
+    border-radius: 20px;
+    
+}
+
+.sidebar-groups{
+    margin-bottom: 1rem;
+}
+
+.sg-title{
+    margin-bottom: 0.5rem;
+    color: #cd8c38  ;
+}
+input{
+    margin-bottom: 0.6rem;
+}
+ input[type=checkbox]:checked{
+    accent-color: #cd8c38;
+}
+input[type=radio]:checked{
+    accent-color: #cd8c38;
+} 
+
+label{
+    margin-left: 0.1rem;
+}
+#moviescontainer{
+    height: 300px;
+    position: relative;
+    bottom: 500px;
+    left: 400px;
+}
+#upcoming-img-box{
+    position: relative;
+    height: 300px;
+    width: 1000px;
+    border:1px solid ;
+    border-radius: 30px;
+}
+
+#avatar{
+    border-top-left-radius:30px ;
+    border-top-right-radius:30px ;
+    border-bottom-left-radius:30px ;
+    border-bottom-right-radius:30px ;
+}
+
+#upcoming-title{
+    position: relative;
+    bottom: 280px;
+    left: 20px;
+    color: #cd8c38;
+    background-color: #1e1f26;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 35px;
+    border: 1px solid #cd8c38;
+}
+
+#buttons{
+    position: relative;
+    bottom: 70px;
+    left: 30px;
+    color: #cd8c38;
+    
+    
+}
+
+#btn{
+    height: 35px;
+    width: 100px;
+    position: relative;
+    bottom:24px ;
+    border-radius: 20px;
+    background-color: #1e1f26;
+    line-height: 35px;
+    border: 1px solid #cd8c38;
+    text-align: center;
+    
+}
+#btnt{
+
+    width: 100px;
+    background-color: #1e1f26;
+    position: relative;
+    bottom:60px ;
+    left: 130px;
+    border-radius: 20px;
+    
+    line-height: 35px;
+    border: 1px solid #cd8c38;
+    text-align: center;
+}
+
+#btn:hover>a{ 
+    color:#1e1f26 ; 
+}
+#btn:hover{ 
+   
+    background-color:  #cd8c38;
+
+}
+#anchor1:hover{
+    color: #1e1f26;
+}
+
+#btnt:hover>a{ 
+    color:#1e1f26 ; 
+}
+#btnt:hover{ 
+   
+    background-color:  #cd8c38;
+
+}
+#anchor2:hover{
+    color: #1e1f26;
+}
+
+#vickram{
+    position: relative;
+    top: 30px;
+    left: 80px;
+}
+#leo{
+    position: relative;
+    bottom:337px ;
+    left: 380px;
+}
+#kalki{
+    position: relative;
+    bottom:704px ;
+    left: 680px;
+}
+
+.current-movies{
+    line-height: 30px;
+}
+
+.cm-img{
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+}
+
+#btn1{
+    height: 35px;
+    width: 100px;
+    position: relative;
+   
+    border-radius: 30px;
+    background-color: #1e1f26;
+    line-height: 35px;
+    border: 1px solid #cd8c38;
+    text-align: center;
+    
+}
+
+#btn1:hover>a{ 
+    color:#1e1f26 ; 
+}
+#btn1:hover{ 
+   
+    background-color:  #cd8c38;
+
+}
+#anchor3:hover{
+    color: #1e1f26;
+}
+
+#btn2{
+    height: 35px;
+    width: 100px;
+    position: relative;
+   
+    border-radius: 30px;
+    background-color: #1e1f26;
+    line-height: 35px;
+    border: 1px solid #cd8c38;
+    text-align: center;
+    
+}
+
+#btn2:hover>a{ 
+    color:#1e1f26 ; 
+}
+#btn2:hover{ 
+   
+    background-color:  #cd8c38;
+
+}
+#anchor4:hover{
+    color: #1e1f26;
+}
+
+#btn3{
+    height: 35px;
+    width: 100px;
+    position: relative;
+   
+    border-radius: 30px;
+    background-color: #1e1f26;
+    line-height: 35px;
+    border: 1px solid #cd8c38;
+    text-align: center;
+    
+}
+
+#btn3:hover>a{ 
+    color:#1e1f26 ; 
+}
+#btn3:hover{ 
+   
+    background-color:  #cd8c38;
+
+}
+#anchor5:hover{
+    color: #1e1f26;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="top-bar">
+        <div id="left-content">
+            
+            <nav id="navigation">
+                <h2 id="title">ProFlaut-Entertainment</h2>
+            <p id="nav1"><a class="navcontent"  href="" id="movies">Movies</a></p>
+            <p id="nav2"><a  class="navcontent" href="../landing.html">Music</a></p>
+
+            <p id="nav3"><a href="../assessment(N.GOWTHAM).html" id="signout">Signout</a>
+                <div id="popup"><p>Have a Good Day!!!</p></div>
+
+        </nav>
+        </div>
+    </div>
+
+
+<div id="main-content">
+    <div id="sidebar">
+        <form action="#">
+            <div class="sidebar-groups">
+                <h3 class="sg-title">Categories</h3>
+                <input type="checkbox" id="Adventure" value="Adventure">
+                <label for="Adventure">Adventure</label><br>
+
+                <input type="checkbox" id="Action" value="Action">
+                <label for="Action">Action</label><br>
+
+                <input type="checkbox" id="Animation" value="Animation">
+                <label for="Animation">Animation</label><br>
+
+                <input type="checkbox" id="Comedy" value="Comedy">
+                <label for="Comedy">Comedy</label><br>
+
+                <input type="checkbox" id="Science" value="Science">
+                <label for="Science">Science-Fiction</label><br>
+
+                <input type="checkbox" id="Thriller" value="Thriller">
+                <label for="Thriller">Thriller</label><br>
+
+                <input type="checkbox" id="History" value="History">
+                <label for="History">History</label><br>
+
+                <input type="checkbox" id="Documentory" value="Documentory">
+                <label for="Documentory">Documentory</label><br>
+
+                <input type="checkbox" id="Fantasy" value="Fantasy">
+                <label for="Fantasy">Fantasy</label><br>
+
+            
+
+            </div>
+            <div class="sidebar-groups">
+                <h3 class="sg-title">Language</h3>
+                <input type="checkbox" id="English" value="English">
+                <label for="English">English</label>
+
+                <input type="checkbox" id="Tamil" value="Tamil">
+                <label for="Tamil">Tamil</label>
+
+                <input type="checkbox" id="Hindi" value="Hindi">
+                <label for="Hindi">Hindi</label>
+            </div>
+            <div class="sidebar-groups">
+                <h3 class="sg-title">Time</h3>
+
+                <input type="radio" id="Morning" value="Morning" name="Time">
+                <label for="Morning">Morning</label>
+
+                <input type="radio" id="Night" value="Night" name="Time">
+                <label for="Night">Night</label>
+
+            </div>
+            
+        </form>
+    </div>
+    <div id="moviescontainer">
+        <div id="upcoming-img-box">
+            <img src="https://www.newmanvantage.com/content/images/2023/02/Avatar-2-The-Way-Of-Water.jpg" id="avatar" height="300" width="1000"> 
+             
+            <p id="upcoming-title">Upcoming Movies</p>
+            <div  id="buttons">
+                <p  id="btn"><a href="" id="anchor1">Soon...</a></p>
+                <p  id="btnt"><a href="https://youtu.be/a8Gx8wiNbs8?si=VJksLuinkFFzWpjq" id="anchor2">Play Trailer</a></p>
+            </div>
+        </div>
+
+        <div  class="current-movies" id="vickram">
+            <div class="current-movie">
+                <div class="cm-img-box">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOTYxOWU3OWYtOGM4NC00NDhlLTlmZTYtMGUxM2YwZmFhOGFlXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" height="260" width="200" class="cm-img">
+                </div>
+                <h3 class="movie-title">Vickram</h3>
+                <p id="screen-name">Screen : Platinum</p>
+                <div id="booking">
+                    <p id="btn1"><a href="" id="anchor3">Buy Tickets</a></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div  class="current-movies" id="leo">
+            <div class="current-movie">
+                <div class="cm-img-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/75/Leo_%282023_Indian_film%29.jpg" height="260" width="200" class="cm-img">
+                </div>
+                <h3 class="movie-title">Leo</h3>
+                <p id="screen-name">Screen : Diamond</p>
+                <div id="booking">
+                    <p id="btn2"><a href="" id="anchor4">Buy Tickets</a></p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div  class="current-movies" id="kalki">
+            <div class="current-movie">
+                <div class="cm-img-box">
+                    <img src="https://stat4.bollywoodhungama.in/wp-content/uploads/2024/06/Kalki-2898-AD.jpeg" height="260" width="200" class="cm-img">
+                </div>
+                <h3 class="movie-title">Kalki-2898-AD</h3>
+                <p id="screen-name">Screen : Gold</p>
+                <div id="booking">
+                    <p id="btn3"><a href="" id="anchor5">Buy Tickets</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

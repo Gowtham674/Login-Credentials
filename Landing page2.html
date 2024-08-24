@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>#navigation{
+        background-color: rgb(51,51,51);
+         height: 55px;
+         width: 1500px;
+         word-spacing: 10px;
+         line-height: 50px;
+         position: fixed;
+         left: 0px;
+         top: -8px;
+         word-spacing: 50px;
+         display: inline;
+         display: flex;
+         justify-content: flex-start;
+         
+         
+    }
+    nav{
+        position: relative;
+        left: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .navcontent{
+        text-decoration: none;
+        color: white;
+        width: 100px;   
+    }
+    *{
+        font-family: sans-serif;
+    }
+    #nav1{
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        left: 10px;
+        width: 100px;
+        text-align: center;
+    }
+    
+     #nav2{
+        display: inline-block;
+        position: relative;
+        top: -82px;
+        left: 520px;
+        display: flex;
+        text-align: center; 
+    } 
+    #nav3{
+        display: inline-block;
+        position: relative;
+        top: -148px;
+        left: 640px;
+        display: flex;  
+        text-align: center;
+    }
+    #nav4{
+        display: inline-block;
+        position: relative;
+        top: -215px;
+        left: 740px;
+        display: flex;
+        text-align: center;
+    }
+    #nav5{
+        display: inline-block;
+        position: relative;
+        top: -280px;
+        left: 840px;
+        display: flex;
+        text-align: center;
+    }
+    #nav6{
+        display: inline-block;
+        position: relative;
+        top: -346px;
+        left: 1400px;
+        display: flex;
+        text-align: center;
+        width: 80px;
+        justify-content: center;
+    }
+    
+    #popup{
+        position: relative;
+        top: -380px;
+        left: 1300px;
+        color: red;
+        word-spacing: 5px;
+        display: none;
+        
+        
+    }
+    #nav6:hover+#popup{
+        display: inline-block;
+    }
+    #nav1:hover{
+        background-color: rgb(68,68,68);    
+    }
+    #amytunes{
+           position: fixed;
+          
+    }
+    
+    #nav2:hover{
+        background-color: rgb(68,68,68);
+       
+         
+    }
+    #nav3:hover{
+        background-color: rgb(68,68,68);
+        
+    }
+    #nav4:hover{
+        background-color: rgb(68,68,68);
+        
+    }
+    #nav5:hover{
+        background-color: rgb(68,68,68);
+        
+    }
+    #nav6:hover{
+        background-color: rgb(68,68,68);
+        
+         
+    }
+    #myTunes{
+        height: 100vh;
+        background-image: url("https://jolly-kalam-23776e.netlify.app/mytunes/img/showcase.jpeg");
+        background-size:100% ;
+        position: relative;
+        left: -8px;
+        top: -60px;
+        color: white;
+        text-align: center;
+        z-index: -1;
+    }
+    
+    #heading1{
+        font-size: 60px;
+        position: relative;
+        top: 150px;
+    }
+    #subheading1{
+        position: relative;
+        top:180px ;
+    }
+    #para1{
+        font-size: 20px;
+        position: relative;
+        top: 200px;
+        display: inline-block;
+        width: 1240px;
+    }
+    #Music{
+        height: 180vh;
+        background-color: rgb(37,37,41);
+        position: relative;
+        top: -88px;
+        left: -8px;
+        color: white;
+        z-index: -1;
+    }
+    #heading2{
+        text-align: center;
+        position: relative;
+        top: 40px;
+        font-size: 40px;
+    }
+    #iconmusic{
+        position: relative;
+        left: -10px;
+    }
+    #subheading2{
+        position: relative;
+        top:60px ;
+        text-align: center;
+    }
+    #para2{
+        position: relative;
+        top: 80px;
+        left: 130px;
+        text-align: center;
+        display: inline-block;
+        line-height: 40px;
+        width: 1180px;
+        font-size: 20px;
+    }
+    #trailbutton{
+        color: white;
+        background-color: rgb(185,4,21);
+        position:relative;
+        top: 150px; 
+        left: -520px;
+        height: 45px;
+        width: 170px;
+    }
+    #para3{
+        position: relative;
+        top: 140px;
+        left: 140px;
+        text-align: center;
+        display: inline-block;
+        line-height: 40px;
+        width: 1180px;
+        font-size: 15px;
+    }
+    #musicimg{
+        position: relative;
+        top: 130px;
+        left: 100px;
+    }
+    #video{
+        height: 100vh;
+        text-align: center;
+        font-weight: 100;
+        position: relative;
+        top: -10px;
+        z-index: -1;
+    }
+    #heading3{
+        text-align: center;
+        position: relative;
+        top: 0px;
+        font-size: 30px;
+    }
+    #para4{
+        font-size: larger;
+        line-height: 35px;
+        width: 1140px;
+        position: relative;
+        left: 140px;
+        top: 20px;
+    }
+    #readbutton{
+         color:white ;
+         background-color: rgb(16,48,99);
+         width: 90px;
+         height: 50px;
+         font-size: 15px;
+         position: relative;
+         top: 20px;
+    }
+    #videoimg{
+        position: relative;
+        top: 30px;
+    }
+    #sky{
+        height: 70vh;
+        background-image: url("https://jolly-kalam-23776e.netlify.app/mytunes/img/section-bg.jpeg");
+        background-size: 100% 100%;
+        position: relative;
+        top: 500px;
+        left: -8px;
+        color: white;
+        text-align: center;
+        z-index: -1;
+    }
+    #heading4{
+        position: relative;
+        top: 180px;
+    }
+    #para5{
+         position: relative;
+         top: 200px;
+         left:140px ;
+         line-height: 35px;
+         font-size: 20px;
+         width: 1180px;
+    }
+    #giftcards{
+        height: 50vh;
+        position: relative;
+        top: 600px;
+        z-index: -1;
+    }
+    
+    #cards{
+       position: relative;
+       left: 200px;
+    }
+    #Giftinfo{
+        width: 600px;
+        position: relative;
+        top: -400px;
+        left: 820px;
+        font-weight: 100;
+    }
+    #heading5{
+        font-size: 30px;
+    }
+    #para6{
+        line-height: 30px;
+    }
+    #para7{
+        position: relative;
+        top: 10px;
+    }
+    #line1{
+        position: relative;
+        top: 15px;
+    }
+    #iconredeem{
+        position: relative;
+        top: 20px;
+    }
+    #redeem{
+        position: relative;
+        top: 20px;
+        color: black;
+    }
+    #contents{
+        position: relative;
+        top: 660px;
+        left: -8px;
+        height: 45vh;
+        background-color: rgb(37,37,41);
+        color: white;
+        z-index: -1;
+    }
+    #item1,#item2,#item3,#item4,#item5{
+                 height: 300px;
+                 width: 200px;
+                 display: inline-block;
+                 line-height: 35px;
+                 position: relative;
+                 left: 240px;
+                 padding: 30px;
+    }
+    .footcontent{
+        display: block;
+        font-size: 15px;
+    }
+    .h4content{
+        font-size: 18px;
+    }
+    #footer{
+        background-color: rgb(51,51,51);
+        height: 60px;
+        line-height: 50px;
+        position: relative;
+        top: 644px;
+        left: -8px;
+        color: white;
+        text-align: center;
+    }
+    #song{
+        z-index: +1;
+        color: white;
+        position: relative;
+        top: 100px;
+    }
+    
+    
+    </style>
+    
+</head>
+<body>
+    <div id="navigation"><nav>
+        <p id="nav1"><a class="navcontent"  href="#myTunes" id="amyTunes">Hello"User!!!"</a></p>
+          <p id="nav2"><a  class="navcontent" href="../movie.html">Movie</a> </p>  
+         <p id="nav3"><a  class="navcontent" href="#Music">Music</a></p>
+        <p id="nav4"><a  class="navcontent" href="#video">Video</a></p>
+        <p id="nav5"><a  class="navcontent" href="#giftcards">GiftCards</a> </p>
+       
+        <p id="nav6">
+                <a href="../assessment(N.GOWTHAM).html" id="signout">Signout</a>
+                <div id="popup"><p>Have a Good Day!!!</p></div>
+    
+        </nav></p>
+        
+         
+    </div>
+        <div id="myTunes">
+            
+            <h1 id="heading1">myTunes</h1>
+
+            <audio id="song"  loop autoplay >
+                <source src="../Tum-Hi-Ho-Instrumental.mp3" type="audio/mp3">
+            </audio>
+
+
+           <h1 id="subheading1">Your music, movies, and TV shows take center stage.</h1>
+           <p id="para1">myTunes is the best way to organize and enjoy the music, movies, and TV shows you already have — and shop for the ones you want. Enjoy all the entertainment myTunes has to offer on your Mac and PC.</p>
+        </div>
+    <div id="Music">
+        <h1 id="heading2"><i id="iconmusic" class="fa-solid fa-music"></i>Music</h1>
+        <h1 id="subheading2">45 million songs. Zero ads.</h1>
+        <p id="para2">Stream over 45 million songs, ad-free. Or download albums and tracks to listen to offline. All the music in your personal myTunes library — no matter where it came from — lives right alongside the Orange Music catalog. Start your free three-month trial with no commitment, and cancel anytime.</p>
+        <button id="trailbutton"><a href="#myTunes" id="trail">Start Your Trail Now</a></button>
+        <p id="para3">Orange Music is available in myTunes, and for iOS and Android devices.</p>
+        <img id="musicimg" src="https://jolly-kalam-23776e.netlify.app/mytunes/img/mockup1.png" alt="">
+    </div>
+    <div id="video"><h1 id="heading3">The movie and TV collection you always wished for. Granted.</h1>
+    <p id="para4">With over 100,000 movies and TV shows to choose from, there's always something great to watch on myTunes and if you watch on Orange TV 4K, you'll be able to enjoy a tremendous selection of your favorite content in 4K HDR. So get ready to enjoy episodes of your favorite TV shows or hit movies you've been waiting to see — anytime, anywhere. Just tap to play, or even download if you're going somewhere you won't have Wi-Fi.</p>
+    <button id="readbutton"><a href="#myTunes" id="readmore">Read More</a></button>
+    <br>
+    <img id="videoimg" src="https://jolly-kalam-23776e.netlify.app/mytunes/img/mockup2.png" alt="">
+    </div>
+    <div id="sky">
+        <h1 id="heading4">A world of entertainment. Available wherever you are.</h1>
+    <p id="para5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam nobis, nisi ut expedita, doloribus reprehenderit explicabo non velit repellat alias saepe inventore repellendus? Molestias suscipit eos tempora? Quae quaerat cumque in veritatis impedit dolorum sapiente recusandae minima quo aperiam quam, excepturi quasi totam ad quas? Ipsam laudantium soluta delectus!</p>
+    </div>
+    <div id="giftcards">
+       <img id="cards" src="https://jolly-kalam-23776e.netlify.app/mytunes/img/cards.png" height="400" width="600">
+       <section id="Giftinfo">
+       <h3 id="heading5">Gift Cards</h3>
+       <p id="para6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque expedita tempore quasi omnis a aut et totam illo fuga accusamus dolorum vero, ut harum consectetur. Minima molestias officiis culpa non sed dicta itaque. Et aliquam illo obcaecati molestias veritatis porro.</p>
+       <p id="para7">Already have an Orange MyTunes Music Gift Card?</p>
+       <hr id="line1">
+       
+       <i id="iconredeem" class="fa-solid fa-chevron-right"></i><a id="redeem" href="#myTunes">
+       Redeem</a>
+    </section>
+    </div>
+    <div id="contents">
+        <section id="item1">
+            <h4 class="h4content">Shop & Learn</h4>
+            <hr>
+            <a class="footcontent" href="#myTunes">Shows</a>
+            <a class="footcontent" href="#myTunes">Movies</a>
+            <a class="footcontent" href="#myTunes">Music</a>
+            <a class="footcontent" href="#myTunes">Apps</a>
+            <a class="footcontent" href="#myTunes">Gift Cards</a>    
+        </section>
+        <section id="item2">
+            <h4 class="h4content">Orange Store</h4>
+            <hr>
+            <a class="footcontent" href="#myTunes">Find a Store</a>
+            <a class="footcontent" href="#myTunes">Today at Orange</a>
+            <a class="footcontent" href="#myTunes">Orange Camp</a>
+            <a class="footcontent" href="#myTunes">Financing</a>
+            <a class="footcontent" href="#myTunes">Order Status</a>    
+        </section>
+        <section id="item3">
+            <h4 class="h4content">Education & Business</h4>
+            <hr>
+            <a class="footcontent" href="#myTunes">Orange & Education</a>
+            <a class="footcontent" href="#myTunes">Shop For College</a>
+            <a class="footcontent" href="#myTunes">Orange & Business</a>
+            <a class="footcontent" href="#myTunes">Shop For Business</a>
+            <a class="footcontent" href="#myTunes">Jobs</a>    
+        </section>
+        <section id="item4">
+            <h4 class="h4content">About Orange</h4>
+            <hr>
+            <a class="footcontent" href="#myTunes">Newsroom</a>
+            <a class="footcontent" href="#myTunes">Orange Leadership</a>
+            <a class="footcontent" href="#myTunes">Investors</a>
+            <a class="footcontent" href="#myTunes">Events</a>
+            <a class="footcontent" href="#myTunes">Contact Orange</a>    
+        </section>
+    </div>
+    <div id="footer">
+        <p id="para8">Copyright © 2019 Orange myTunes</p>
+
+    </div>
+
+
+
+
+    <script src="https://kit.fontawesome.com/ec5865526b.js" crossorigin="anonymous"></script>
+</body>
+</html>
